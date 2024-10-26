@@ -88,6 +88,9 @@ wait $pid
 
 # since workers are required to exit when a job is completely finished,
 # and not before, that means the job has finished.
+# mr-out* 表示所有以 mr-out 开头的文件（例如 mr-out1、mr-out2 等）。
+# sort 命令会将这些文件的内容进行排序。排序结果会被传递到下一步。
+# grep . 会匹配包含至少一个字符的行，即去除空行，仅保留非空行。
 sort mr-out* | grep . > mr-wc-all
 if cmp mr-wc-all mr-correct-wc.txt
 then
