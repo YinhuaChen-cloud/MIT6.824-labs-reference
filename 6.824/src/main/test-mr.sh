@@ -65,6 +65,7 @@ failed_any=0
 # first word-count
 
 # generate the correct output
+# 生成正确测试结果
 ../mrsequential ../../mrapps/wc.so ../pg*txt || exit 1
 sort mr-out-0 > mr-correct-wc.txt
 rm -f mr-out*
