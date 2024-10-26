@@ -15,6 +15,7 @@ import "os"
 import "fmt"
 
 func main() {
+	// 看输入参数是否合规
 	if len(os.Args) < 2 {
 		fmt.Fprintf(os.Stderr, "Usage: mrcoordinator inputfiles...\n")
 		os.Exit(1)
